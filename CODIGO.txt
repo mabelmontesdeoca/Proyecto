@@ -1,0 +1,67 @@
+import java.util.Scanner;
+
+public class FIGURA {
+
+    public static void imprimirTrianguloA(int tamano) {
+        char[][] matriz = new char[tamano][tamano];
+
+        for (int i = 0; i < tamano; i++) {
+            for (int j = 0; j <= i; j++) {
+                matriz[i][j] = '*';
+            }
+        }
+
+        imprimirMatriz(matriz);
+    }
+
+    public static void imprimirTrianguloB(int tamano) {
+        char[][] matriz = new char[tamano][tamano];
+
+        for (int i = 0; i < tamano; i++) {
+            for (int j = 0; j < tamano - i; j++) {
+                matriz[i][j] = '*';
+            }
+        }
+
+        imprimirMatriz(matriz);
+    }
+
+    private static void imprimirMatriz(char[][] matriz) {
+        for (char[] fila : matriz) {
+            for (char c : fila) {
+                System.out.print(c + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        while (true) {
+            System.out.println("Menú:");
+            System.out.println("1. Triángulo A");
+            System.out.println("2. Triángulo B");
+            System.out.println("3. Salir");
+            System.out.print("Seleccione una opción: ");
+
+            int opcion = scanner.nextInt();
+
+            if (opcion == 1) {
+                System.out.print("Ingrese el tamaño del Triángulo A: ");
+                int tamano = scanner.nextInt();
+                imprimirTrianguloA(tamano);
+            } else if (opcion == 2) {
+                System.out.print("Ingrese el tamaño del Triángulo B: ");
+                int tamano = scanner.nextInt();
+                imprimirTrianguloB(tamano);
+            } else if (opcion == 3) {
+                System.out.println("Saliendo del programa.");
+                break;
+            } else {
+                System.out.println("Opción no válida. Por favor, elija una opción válida.");
+            }
+        }
+    }
+}
