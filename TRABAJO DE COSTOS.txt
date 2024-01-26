@@ -1,0 +1,49 @@
+                                                 Proyecto de Fin de Ciclo
+Realizar el análisis de complejidad del algoritmo
+De su proyecto de medio ciclo mejorado realice el análisis de estimación de costes del proyecto (análisis de sus complejidad de los métodos y el programa)
+                                                 1.	TIEMPO MEJOR ESPERADO
+1.	Ta podría representar operaciones simples como asignaciones y bucles básicos.
+2.	toa podría representar operaciones de entrada y salida, ya que implica interacción con el usuario.
+Entonces:
+•	taTa podría representar el tiempo de operaciones dentro de los bucles.
+•	toa podría representar el tiempo de operaciones relacionadas con la entrada del usuario.
+Por lo tanto, podríamos tener algo así como:
+Tiempo=2(ta)+2(ta )+2(ta )+100⋅(tc +2⋅to +2⋅ta )+100⋅(tc +2⋅to +2⋅ta )+100⋅(tc +2⋅to +2⋅ta )+tc  = 
+2((ta) - 2(ta ) +- 2(ta ) +100 ..(tc  2. ta)+100⋅2⋅100⋅2 . .  . 2 . ta ) +tc 
+2((ta en imprimirTrianguloA)
+- 2(ta en imprimirTrianguloB)
+- 2(ta en main)
+100 ..(tc en imprimirTrianguloA 2. ta en imprimirTrianguloA)
+100⋅2⋅100⋅2 . . a en main . 2 . ta en main)
+tc en main
+                                               
+
+
+                                                     2.	TIEMPO PEOR ESPERADO
+Para calcular el tiempo en el peor caso esperado, generalmente se busca la ruta de ejecución que toma más tiempo.
+Podríamos considerar que el peor caso se daría cuando se selecciona la opción 2 (Triángulo B) en el menú.
+Tiempo,Peor=tc 2 . . . . . . . 2⋅. . . 100⋅2⋅to +2⋅ta 
+tc en main . 2 . . . . . . . 2⋅. . . 100
+2⋅to en imprimirTrianguloB
+2⋅ta en imprimirTrianguloB
+En este caso, estamos considerando la opción que realiza la impresión del Triángulo B. Aquí, asumimos que la ejecución de cada operación dentro del bucle de impresión y la entrada/salida del usuario toma el máximo tiempo posible.
+                                                    
+
+
+
+                                                          3.- TIEMPO ESPERADO
+Si se considera las complejidades de las opciones del menú que discutimos anteriormente quedaría:
+•	Tiempo_TrianguloBTiempo-TrianguloBB: Representa el tiempo estimado para la opción 2 (Triángulo B).
+•	Tiempo_EntradaSalidaTiempo-EntradaSalida: Representa el tiempo asociado con la entrada/salida de usuario (lectura de entrada y salida de resultados).
+•	Tiempo_SalidaTiempo-Salida: Representa el tiempo estimado para la opción 3 (Salir).
+Tiempo_Esperado=13.+13⋅+13⋅
+13⋅(Tiempo_TrianguloA+Tiempo_EntradaSalida)
+13⋅(Tiempo_TrianguloB+Tiempo_EntradaSalida)
+13⋅(Tiempo_Salida)
+Tiempo, Esperado = 3 1o. +- 3 1 . +- 3 1 1o
+Sustituyendo con las estimaciones anteriores:
+Tiempo_Esperado≈13⋅(202⋅ta+202⋅to+101⋅tc)+13⋅(202⋅ta+202⋅to+101⋅tc)+13⋅(tc)
+Tiempo,Esperado 31 1 1 .. 202. . . . . +. 101⋅tc)+31⋅(202⋅ta+to+tc)+31⋅(tc)
+Simplificando:
+Tiempo_Esperado≈202⋅ta+202⋅to+101⋅tc
+Tiempo-Esperado 202 . . . . . . . . . 
